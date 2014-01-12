@@ -1,9 +1,12 @@
+require 'bundler/setup'
 require 'albacore'
 
 
+desc 'build project'
 build :build do |b|
 	b.sln = "etcetera.sln"
 end
+task :default => :build
 
 task :nuget do
 	#make dir build
